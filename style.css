@@ -14,16 +14,19 @@
     background-size: cover;
     background-position: center;
     padding-bottom: 600px;
+    z-index: -20;
 }
 
 .navbar-kopium {
     display: flex;
     justify-content: space-between;
     position: sticky;
-    z-index: 50;
+    z-index: 1000;
+    top: 0;
+    width: 100%;
 }
 
-.navbar-kopium img {
+.navbar-kopium img {    
     width: 100px;
     height: auto;
     padding-left: 45px;
@@ -86,6 +89,7 @@
     display: grid;
     justify-content: center;
     text-align: center;
+    z-index: -20;
 }
 
 .home h2 {
@@ -115,4 +119,32 @@
 .btn:hover{
     background-color: #312616;
     transition: 0.5s ease-in;
+}
+
+/* story */
+
+.story-kopium1 {
+    display: flex;
+    font-family: poppins;
+    margin-top: 10rem;
+    justify-content: center;
+}
+
+.story1 h2{
+    max-width: 700px;
+    padding-right: 30vh;
+    padding-top: 10vh;
+}
+
+.story-kopium2 {
+    display: flex;
+    font-family: poppins;
+    margin-top: 10rem;
+    justify-content: center;
+}
+
+.story2 h2{
+    max-width: 700px;
+    padding-left: 30vh;
+    padding-top: 10vh;
 }
