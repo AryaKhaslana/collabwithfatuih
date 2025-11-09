@@ -210,6 +210,11 @@ body {
     border-radius: 20px;
     margin-right: 100px;
     margin-left: 100px;
+    color: white;
+}
+
+.border-testi h2 {
+    padding-top: 30px;
 }
 
 .testimoni-kopium {
@@ -227,4 +232,18 @@ body {
     text-align: center;
     color: white;
     font-family: poppins;
+    gap: 250px;
+    padding-bottom: 60px;
+}
+
+.testimoni1 p {
+    max-width: 450px;
+}
+
+.testimoni2 p {
+    max-width: 400px;
+}
+
+.testimoni3 p {
+    max-width: 400px;
 }
