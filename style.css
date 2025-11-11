@@ -1,12 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@font-face {
+    font-family: 'poor richard';
+    src: url('font/poor-richard/PoorRichardOpti.otf');
+}
 
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
 body {
     font-family: poppins;
+    background-color: #FFF0DB;
 }
 
 
@@ -37,7 +43,7 @@ body {
     z-index: 1000;
     top: 0;
     width: 100%;
-    background-color: #7d6038;
+    background-color: #533914;
 }
 
 .navbar-kopium img {    
@@ -82,7 +88,7 @@ body {
   }
 
 .nav a {
-    color: #533914;
+    color: #FFF0DB;
     text-decoration: none;
     padding-right: 40px;
     padding-top: 30px;
@@ -107,12 +113,14 @@ body {
 }
 
 .home h2 {
+    font-family: 'poor richard',serif;
     font-size: 3.5rem;
     font-weight: 800;
     padding-bottom: 40px;
 }
 
 .home h3 {
+    font-family: 'poor richard',serif;
     max-width: 400px;
     font-weight: 200;
     padding-bottom: 20px;
@@ -121,13 +129,19 @@ body {
 .btn {
     display: inline-block;
     border: none;
-    padding: 10px;
-    font-size: 1rem;
-    margin: 20px;
+    margin: auto;
     background-color: #7d6038;
     border-radius: 35px;
     color: white;
     cursor: pointer;
+    width: 88px;
+    height: 28px;
+    padding: 19px 45px;
+}
+
+.btn h1 {
+    font-weight: 400;
+    font-size: 24px;
 }
 
 .btn:hover{
@@ -137,30 +151,67 @@ body {
 
 /* story */
 
-.story-kopium1 {
+.story {
+    font-family: 'poor richard', serif;
+    padding: 130px 50px; 
+    background-color: #f7f3e8;
+    min-height: 100vh;
+}
+
+.story-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 83px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.content-left {
     display: flex;
-    font-family: poppins;
-    margin-top: 10rem;
-    justify-content: center;
+    flex-direction: column;
 }
 
-.story1 h2{
-    max-width: 700px;
-    padding-right: 30vh;
-    padding-top: 10vh;
-}
-
-.story-kopium2 {
+        
+.content-right {
     display: flex;
-    font-family: poppins;
-    margin-top: 10rem;
-    justify-content: center;
+    flex-direction: column;
 }
 
-.story2 h2{
-    max-width: 700px;
-    padding-left: 30vh;
-    padding-top: 10vh;
+        
+.quote1 {
+    width: 586px;
+    padding-bottom: 112px;
+}
+        
+.quote1 p {
+    font-family: 'Poor Richard', serif;
+    font-weight: 400;
+    font-size: 30px;
+    color: #000000;
+}
+
+.quote2 {
+    width: 586px;
+    padding-top: 100px;
+}
+.quote2 p {
+    font-family: 'Poor Richard', serif;
+    font-weight: 400;
+    font-size: 30px;
+    color: #000000;
+    text-align: left;
+}
+
+.content-right img {
+    width: 613px; 
+    height: 420px;
+    align-self: flex-end;
+}
+
+.content-left img {
+    width: 613px; 
+    height: 420px;
+    align-self: flex-start;
 }
 
 /* tentang kopium */
