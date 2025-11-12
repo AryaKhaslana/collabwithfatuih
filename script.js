@@ -56,3 +56,12 @@ const swiper = new Swiper('.kopium-slider', {
         }
     }
 });
+
+window.addEventListener("scroll", () => {
+    const nav = document.querySelector(".navbar-kopium");
+    if (window.scrollY > 10) {
+        nav.classList.add("sticky-shadow");
+    } else {
+        nav.classList.remove("sticky-shadow");
+    }
+});
