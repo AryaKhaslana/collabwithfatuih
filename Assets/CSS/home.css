@@ -608,3 +608,172 @@ transition: opacity 0.6s ease-out, transform 0.6s ease-out;
     opacity: 1; /* Jadi kelihatan */
     transform: translateY(0);
 }
+
+.border-testi {
+opacity: 0;
+transform: translateY(30px); 
+transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.border-testi.visible {
+    opacity: 1; /* Jadi kelihatan */
+    transform: translateY(0);
+}
+
+/* Media query */
+/* =========================================
+   RESPONSIVE MEDIA QUERIES (KOPIUM)
+   Taruh ini di bagian paling bawah CSS
+   ========================================= */
+
+/* --- TABLET & LAYAR KECIL (Max-width: 991px) --- */
+@media screen and (max-width: 991px) {
+    
+    /* Navbar: Logo di atas, menu di bawahnya */
+    .navbar-kopium {
+        flex-direction: column;
+        padding: 15px;
+        background-color: rgba(0, 0, 0, 0.8); /* Biar kebaca kalo background gambar */
+    }
+
+    .navbar-kopium img {
+        margin-bottom: 15px;
+        max-width: 150px; /* Kecilin logo dikit */
+    }
+
+    .nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .nav-link {
+        font-size: 14px; /* Kecilin font menu */
+    }
+
+    /* Story Section: Jadi tumpuk ke bawah (Column) */
+    .story-container {
+        flex-direction: column;
+        padding: 30px;
+    }
+
+    .content-left, 
+    .content-right {
+        width: 100%; /* Full width */
+        margin-bottom: 30px;
+        text-align: center;
+    }
+    
+    /* Gambar di story biar ga kegedean */
+    .content-left img, 
+    .content-right img {
+        width: 80%; 
+        margin: 0 auto;
+    }
+}
+
+/* --- MOBILE (HP) (Max-width: 768px) --- */
+@media screen and (max-width: 768px) {
+
+    /* Home / Hero Section */
+    .home-kopium {
+        padding: 100px 20px; /* Tambah padding biar ga mepet */
+        text-align: center;
+    }
+
+    .home h2 {
+        font-size: 40px; /* Judul diperkecil */
+    }
+
+    .home h3 {
+        font-size: 18px;
+    }
+
+    /* Tentang Kami */
+    .tentang-kopium {
+        flex-direction: column; /* Tumpuk teks dan video */
+        padding: 30px 20px;
+        text-align: center;
+    }
+
+    .tentang {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    /* Bikin Video Youtube Responsif */
+    .videow {
+        width: 100%;
+    }
+    
+    .videow iframe {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16/9; /* Jaga rasio video */
+    }
+
+    /* Testimoni: Jadi 1 kolom ke bawah */
+    .test {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .testimoni1, .testimoni2, .testimoni3 {
+        width: 90%; /* Kartu testimoni hampir full layar */
+        margin-bottom: 20px;
+    }
+
+    /* Footer: Tumpuk semua */
+    .footer {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .emals {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 30px;
+    }
+
+    .flex-footer {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .contact1 {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    /* Swiper Card (Menu Best Seller) */
+    .card-list .card-image img {
+        height: 200px; /* Atur tinggi gambar di HP */
+        object-fit: cover;
+    }
+}
+
+/* --- MOBILE KECIL (Max-width: 480px) --- */
+@media screen and (max-width: 480px) {
+    /* Navbar link jadi 2 baris kalo kebanyakan */
+    .nav {
+        gap: 10px;
+    }
+    
+    .nav-link {
+        font-size: 12px;
+        padding: 5px;
+    }
+
+    /* Judul-judul section */
+    h2 {
+        font-size: 24px;
+    }
+
+    p {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+}
