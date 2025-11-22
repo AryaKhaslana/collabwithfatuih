@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @font-face {
     font-family: 'poor richard';
-    src: url('font/poor-richard/PoorRichardOpti.otf');
+    src: url('/Assets/FONT/PoorRichardOpti.otf');
 }
 @import url('https://fonts.googleapis.com/css2?family=Poly:ital@0;1&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&display=swap');
@@ -463,22 +463,104 @@ html {
 
 .footer-kopium {
     font-family: poppins;
-    background-color: #000000;
+    background-color: #18130a; /* dark gray background */
     color: white;
-    padding-top: 150px;
-    padding-bottom: 150px;
+    padding: 60px 40px;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-column h2 {
+    font-weight: 700;
+    margin-bottom: 16px;
+    font-size: 1.5rem;
+}
+
+.footer-column p,
+.footer-column ul {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+    color: #ffb042;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.social-icon {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 36px;
+    height: 36px;
+    border: 2px solid white;
+    border-radius: 50%;
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.social-icon svg {
+    width: 18px;
+    height: 18px;
+    stroke: currentColor;
+    fill: none;
+
+}
+
+.social-icon :hover {
+    background-color: white;
+    color: #666666;
 }
 
 
-.footer{
+.logo-column {
+    background: transparent;
+    min-height: 160px;
     display: flex;
     justify-content: center;
-    gap: 500px;
+    align-items: center;
 }
 
-.footer img{
-    width: 200px;
+.logo-column img {
+    max-width: 320px;
     height: auto;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+    margin-left: 60px;
 }
 
 .lokasi {
@@ -776,4 +858,19 @@ transition: opacity 0.6s ease-out, transform 0.6s ease-out;
         font-size: 14px;
         line-height: 1.5;
     }
+}
+
+.social-icon.instagram:hover {
+    background-color: #E1306C;
+    color: white;
+}
+
+.social-icon.facebook:hover {
+    background-color: #1877F2;
+    color: white;
+}
+
+.social-icon.twitter:hover {
+    background-color: #1DA1F2;
+    color: white;
 }
