@@ -8,8 +8,13 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <title>KOPIUM</title>
     <link rel="stylesheet" href="../Assets/CSS/home.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
+    <div id="loader">
+        <div class="coffee-cup">☕</div>
+        <h2>Seduh Kopi...</h2>
+    </div>
     
     <div class="background">   
         <!-- Navbar -->
@@ -108,7 +113,7 @@
     </div>
 </div>
     
-<div class="container swiper" id="best">
+<div class="container swiper" id="best" data-aos="fade-up" data-aos-duration="1000">
   <div class="cons-swip">
     
     <h1>Menu best seller</h1>
@@ -244,10 +249,16 @@
   </footer>
 
 
-
+    <a href="" class="float-wa" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WA">
+    </a>
     
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="../Assets/JAVASCRIPT/home.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>
