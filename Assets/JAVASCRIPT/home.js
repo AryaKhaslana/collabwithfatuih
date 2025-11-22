@@ -122,3 +122,14 @@ document.addEventListener("DOMContentLoaded", () => {
     observer.observe(el);
   });
 });
+
+// Pas website udah SELESAI loading semua gambar/konten
+window.addEventListener("load", function() {
+  const loader = document.getElementById("loader");
+  // Hilangkan loader
+  loader.style.opacity = "0";
+  // Hapus dari layar biar bisa diklik
+  setTimeout(() => {
+      loader.style.display = "none";
+  }, 500);
+});
