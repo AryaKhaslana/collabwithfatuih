@@ -176,3 +176,43 @@ function myFunction() {
   var scrolled = (winScroll / height) * 100;
   document.getElementById("myBar").style.width = scrolled + "%";
 }
+
+const hour = new Date().getHours();
+const greetingElement = document.getElementById("greeting-text");
+
+let text = "";
+if (hour >= 5 && hour < 12) {
+    text = "🌞 Selamat Pagi! Butuh kafein buat mulai hari?";
+} else if (hour >= 12 && hour < 15) {
+    text = "☀️ Panas ya? Ngopi dingin enak nih!";
+} else if (hour >= 15 && hour < 18) {
+    text = "☕ Ngopi sore sambil senja-an yuk?";
+} else {
+    text = "🌙 Masih melek? Temani lemburmu dengan Kopium.";
+}
+
+greetingElement.innerText = text;
+
+const magnets = document.querySelectorAll('.btn');
+
+magnets.forEach((magnet) => {
+    magnet.addEventListener('mousemove', (e) => {
+        const position = magnet.getBoundingClientRect();
+        const x = e.pageX - position.left - position.width / 2;
+        const y = e.pageY - position.top - position.height / 2;
+
+        // Gerakin tombolnya ngikutin mouse (tapi dikit aja)
+        magnet.style.transform = "translate(" + x * 0.3 + "px, " + y * 0.5 + "px)";
+    });
+
+    magnet.addEventListener('mouseout', (e) => {
+        // Balikin ke posisi semula pas mouse pergi
+        magnet.style.transform = "translate(0px, 0px)";
+        magnet.style.transition = "all 0.3s ease";
+    });
+    
+    // Hapus transisi pas lagi gerak biar smooth
+    magnet.addEventListener('mouseenter', (e) => {
+        magnet.style.transition = "none";
+    });
+});
