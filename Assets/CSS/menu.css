@@ -40,6 +40,11 @@ html {
     padding-left: 20px;
 }
 
+.nav a:hover {
+    color: #e2b06b;
+    transition: 0.3s ease-in-out;
+}
+
 /* menu */
 
 .menu-nav {
@@ -81,4 +86,5 @@ html {
     background-color: antiquewhite;
     border-color: #533914;
     color: #e2b06b;
+    transition: 0.3s ease-in-out;
 }
