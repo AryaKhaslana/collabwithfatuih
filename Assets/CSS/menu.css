@@ -88,3 +88,72 @@ html {
     color: #e2b06b;
     transition: 0.3s ease-in-out;
 }
+
+/* --- Container Grid Utama --- */
+.menu-grid {
+    display: grid;
+    /* Ini kuncinya: Bikin 3 kolom. Kalau layar kecil otomatis turun. */
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px; /* Jarak antar kartu */
+    max-width: 1200px; /* Lebar maksimal konten */
+    margin: 50px auto; /* Posisi tengah */
+    padding: 0 20px;
+}
+
+/* --- Style Kartu Menu (Kotak Coklat Muda) --- */
+.menu-item {
+    background-color: #e2b06b; /* Warna Latte/Beige sesuai desain */
+    border-radius: 15px; /* Sudut tumpul */
+    padding: 20px;
+    display: flex; /* Biar Gambar di Kiri, Teks di Kanan */
+    align-items: center; /* Posisi vertikal rata tengah */
+    gap: 20px; /* Jarak gambar ke teks */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3); /* Bayangan sedikit biar timbul */
+    transition: transform 0.3s ease; /* Efek animasi halus */
+}
+
+/* Efek pas kursor nempel di kartu */
+.menu-item:hover {
+    transform: translateY(-5px); /* Naik dikit */
+}
+
+/* --- Style Gambar (Bulat) --- */
+.item-image img {
+    width: 90px;      /* Ukuran lebar gambar */
+    height: 90px;     /* Ukuran tinggi gambar */
+    border-radius: 50%; /* Bikin jadi bulat sempurna */
+    object-fit: cover;  /* Biar gambar gak gepeng/lonjong */
+    border: 3px solid #8B5E3C; /* List coklat tua di pinggir gambar */
+    background-color: white; /* Jaga-jaga kalau gambar transparan */
+}
+
+/* --- Style Teks --- */
+.item-details {
+    flex: 1; /* Ambil sisa ruang yang ada */
+}
+
+.item-name {
+    color: #3E2723; /* Warna Judul (Coklat Tua banget) */
+    margin: 0 0 5px 0; /* Jarak judul ke deskripsi */
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.item-description {
+    color: #5D4037; /* Warna Deskripsi (Coklat agak tua) */
+    font-size: 0.9rem;
+    margin: 0;
+    line-height: 1.4; /* Jarak antar baris tulisan biar enak dibaca */
+}
+
+/* --- Placeholder (Opsional buat ngerapiin grid ganjil) --- */
+.menu-item-placeholder {
+    display: none; /* Sembunyikan aja kalau gak perlu */
+}
+
+/* --- Responsif buat HP (Biar jadi 1 kolom) --- */
+@media (max-width: 768px) {
+    .menu-grid {
+        grid-template-columns: 1fr; /* Jadi 1 kolom doang */
+    }
+}
